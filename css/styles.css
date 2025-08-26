@@ -11732,3 +11732,18 @@ html {
     left: -2vw;
   }
 }
+
+/* Responsividade extra */
+@media (max-width: 576px) {
+  .timeline {
+    border-left: none !important;
+    padding-left: 0 !important;
+  }
+  .timeline-item {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+  .timeline-item::before {
+    left: 0 !important;
+  }
+}
