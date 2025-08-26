@@ -122,39 +122,54 @@
                                 .timeline {
                                     position: relative;
                                     margin: 2rem 0;
-                                    padding-left: 2rem;
-                                    border-left: 3px solid #1e30f3; /* cor do gradiente principal */
+                                    padding-left: 3rem; /* espaço da linha à esquerda */
                                 }
 
                                 .timeline-item {
                                     position: relative;
                                     margin-bottom: 2rem;
-                                    padding-left: 1.5rem;
                                 }
 
                                 .timeline-item::before {
                                     content: '';
                                     position: absolute;
-                                    left: -10px;
+                                    left: 0;  /* posiciona a linha */
                                     top: 0;
-                                    width: 20px;
-                                    height: 20px;
-                                    background: #1012a1; /* cor secundária do gradiente */
+                                    bottom: 0;
+                                    width: 3px;
+                                    background: #1e30f3; /* cor da linha */
+                                    z-index: 0; /* linha atrás de tudo */
+                                }
+
+                                .timeline-item .timeline-bullet {
+                                    position: absolute;
+                                    left: -11px; /* bolinha sobre a linha */
+                                    top: 0.5rem;
+                                    width: 16px;
+                                    height: 16px;
+                                    background: #1012a1;
                                     border-radius: 50%;
                                     border: 3px solid white;
+                                    z-index: 2; /* bolinha acima da linha e do conteúdo */
                                 }
 
                                 .timeline-date {
                                     font-weight: bold;
-                                    margin-bottom: 0.5rem;
+                                    margin-bottom: 0.2rem;
+                                    margin-left: 1.5rem; /* desloca ano para a direita da bolinha */
                                     color: #1e30f3;
+                                    position: relative;
+                                    z-index: 1;
                                 }
 
                                 .timeline-content {
                                     background: #fff;
-                                    padding: 1rem 1.5rem;
+                                    padding: 0.5rem 1rem;
                                     border-radius: 0.5rem;
-                                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                                    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+                                    margin-left: 2rem; /* afasta conteúdo da linha */
+                                    position: relative;
+                                    z-index: 1;
                                 }
                                 </style>
                             <!--

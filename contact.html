@@ -53,29 +53,29 @@
                                 <!-- To make this form functional, sign up at-->
                                 <!-- https://startbootstrap.com/solution/contact-forms-->
                                 <!-- to get an API token!-->
-                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <form id="contactForm" action="https://formsubmit.co/arthurdefaria.nepep@gmail.com" method="POST">
                                     <!-- Name input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                        <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                         <label for="name">Nome Completo</label>
                                         <div class="invalid-feedback" data-sb-feedback="name:required">O nome é obrigatório.</div>
                                     </div>
                                     <!-- Email address input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                        <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                         <label for="email">E-mail</label>
                                         <div class="invalid-feedback" data-sb-feedback="email:required">O e-mail é obrigatório.</div>
                                         <div class="invalid-feedback" data-sb-feedback="email:email">O e-mail é inválido.</div>
                                     </div>
                                     <!-- Phone number input-->
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                        <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
                                         <label for="phone">Número de telefone</label>
                                         <div class="invalid-feedback" data-sb-feedback="phone:required">O telefone é obrigatório.</div>
                                     </div>
                                     <!-- Message input-->
                                     <div class="form-floating mb-3">
-                                        <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                        <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                         <label for="message">Mensagem</label>
                                         <div class="invalid-feedback" data-sb-feedback="message:required">A mensagem é obrigatória.</div>
                                     </div>
@@ -96,7 +96,9 @@
                                     <!-- an error submitting the form-->
                                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Erro ao enviar a mensagem!</div></div>
                                     <!-- Submit Button-->
-                                    <div class="d-grid mb-5"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                    <div class="d-grid mb-5">
+                                        <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
+                                    </div>
                                 </form>
                                 <div class="text-center mb-5">
                                     <p class="lead fw-normal text-muted mb-0">Entre em contato também por:</p>
